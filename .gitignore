@@ -1,0 +1,8 @@
+node_modules/
+build/
+.vscode/
+.DS_Store
+/*.env
+npm-debug.log
+# because Heroku deployment brakes if two locks are present
+package-lock.json

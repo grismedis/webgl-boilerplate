@@ -1,0 +1,33 @@
+{
+  "name": "webgl-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate with WEbGl init, glsl reload and MHR",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack -p --config ./tools/webpack.config.js --display-error-details",
+    "clean": "rm -rf node_modules/ build/",
+    "start": "node ./tools/server.js",
+    "heroku-postbuild": "yarn run build",
+    "new:patch": "npm version patch && git push --follow-tags",
+    "wp:dev": "node ./tools/server-dev.js"
+  },
+  "keywords": [
+    "WEbGL",
+    "HMR"
+  ],
+  "author": "Olga Dmitricenko",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "express": "^4.16.2",
+    "glslify-loader": "^1.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "raw-loader": "^0.5.1",
+    "webpack": "^3.11.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.11.1"
+  }
+}
